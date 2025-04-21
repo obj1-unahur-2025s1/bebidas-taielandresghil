@@ -1,9 +1,36 @@
-object pepita {
-  var energy = 100
+object tito {
+  method peso() {
+    return 70
+  }
 
-  method energy() = energy
+  var rendimiento = 1
+  method rendimiento() {
+    return rendimiento
+  }
+  method consumir(cantidad, bebida) {
+    rendimiento = 1
+    rendimiento = bebida.rendimiento() * cantidad
+  }
 
-  method fly(minutes) {
-    energy = energy - minutes * 3
+  method velocidad() {
+    return (self.rendimiento() * 490) / self.peso()
+  }
+}
+
+object whisky {
+  method rendimiento() {
+    return 0.9
+  }
+}
+
+object terere {
+  method rendimiento() {
+    return 0.1
+  }
+}
+
+object cianuro {
+  method rendimeinto() {
+    return 0
   }
 }
